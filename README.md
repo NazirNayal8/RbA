@@ -2,7 +2,7 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pixels-together-strong-segmenting-unknown/anomaly-detection-on-road-anomaly)](https://paperswithcode.com/sota/anomaly-detection-on-road-anomaly?p=pixels-together-strong-segmenting-unknown)
 
 
-[Nazir Nayal](https://nazirnayal.xyz/), [Mısra Yavuz](https://scholar.google.com/citations?user=lfU8AYUAAAAJ&hl=en), [João Henriques](https://www.robots.ox.ac.uk/~joao/), [Fatma Güney](https://alexander-kirillov.github.io/)
+[Nazir Nayal](https://nazirnayal.xyz/), [Mısra Yavuz](https://scholar.google.com/citations?user=lfU8AYUAAAAJ&hl=en), [João Henriques](https://www.robots.ox.ac.uk/~joao/), [Fatma Güney](https://mysite.ku.edu.tr/fguney/)
 
 [[`arXiv`](https://arxiv.org/abs/2211.14293)][[`BibTeX`](#CitingRbA)]
 <!-- [[`Project`](https://bowenc0221.github.io/mask2former)] -->

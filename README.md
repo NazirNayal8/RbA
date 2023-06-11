@@ -1,4 +1,6 @@
 # RbA: Segmenting Unknown Regions Rejected by All 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pixels-together-strong-segmenting-unknown/anomaly-detection-on-road-anomaly)](https://paperswithcode.com/sota/anomaly-detection-on-road-anomaly?p=pixels-together-strong-segmenting-unknown)
+
 
 [Nazir Nayal](https://nazirnayal.xyz/), [Mısra Yavuz](https://scholar.google.com/citations?user=lfU8AYUAAAAJ&hl=en), [João Henriques](https://www.robots.ox.ac.uk/~joao/), [Fatma Güney](https://alexander-kirillov.github.io/)
 

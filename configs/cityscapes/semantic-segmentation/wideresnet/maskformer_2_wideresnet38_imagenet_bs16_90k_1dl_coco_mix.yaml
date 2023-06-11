@@ -1,0 +1,23 @@
+_BASE_: ../maskformer2_R50_bs16_90k.yaml
+MODEL:
+  BACKBONE:
+    NAME: "WiderResNetA2"
+  WIDE_RESNET:
+    STRUCTURE: [3, 3, 6, 3, 1, 1]
+    DILATION: True
+  SEM_SEG_HEAD:
+    IN_FEATURES: ["res4", "res5", "res6", "res7", "res7_bn"]
+    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES: ["res7_bn"]
+  MASK_FORMER:
+    DEC_LAYERS: 2
+    OUTLIER_SUPERVISION: True
+    OUTLIER_LOSS_TARGET: "nls"
+  FREEZE_PIXEL_DECODER: True 
+  FREEZE_BACKBONE: True
+  WEIGHTS: "pretrained/wideresnet38_imagenet_pretrained.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+INPUT:
+  DATASET_MAPPER_NAME: "mask_former_semantic_coco_mix"
+SOLVER:
+  MAX_ITER: 5000

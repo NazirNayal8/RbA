@@ -1,0 +1,44 @@
+_BASE_: ../maskformer2_R50_bs16_300k.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 192
+    DEPTHS: [2, 2, 18, 2]
+    NUM_HEADS: [6, 12, 24, 48]
+    WINDOW_SIZE: 12
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+    PRETRAIN_IMG_SIZE: 384
+  WEIGHTS: "model_logs/swin_l/mask2former_swin_l_1_dec_layer/model_final.pth"
+  MASK_FORMER:
+    DEC_LAYERS: 2
+    OUTLIER_SUPERVISION: True
+    OUTLIER_LOSS_TARGET: "nls"
+    NUM_OBJECT_QUERIES: 100
+  SEM_SEG_HEAD:
+    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES: ["res5"]
+    IGNORE_VALUE: 255
+    NUM_CLASSES: 19
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  FREEZE_PIXEL_DECODER: True 
+  FREEZE_BACKBONE: True
+  FREEZE_TRANSFORMER_DECODER_EXCEPT_MLP: True
+DATASETS:
+  TRAIN: ("mapillary_cityscapes_sem_seg_train", "cityscapes_fine_sem_seg_train")
+  TEST: ("mapillary_cityscapes_sem_seg_val",)
+INPUT:
+  MIN_SIZE_TRAIN: !!python/object/apply:eval ["[int(x * 0.1 * 2048) for x in range(5, 7)]"]
+  MIN_SIZE_TRAIN_SAMPLING: "choice"
+  MIN_SIZE_TEST: 2048
+  MAX_SIZE_TRAIN: 8192
+  MAX_SIZE_TEST: 2048
+  CROP:
+    ENABLED: True
+    TYPE: "absolute"
+    SIZE: (512, 1024)
+    SINGLE_CATEGORY_MAX_AREA: 1.0
+  DATASET_MAPPER_NAME: "mask_former_semantic_coco_mix"
+  SIZE_DIVISIBILITY: -1

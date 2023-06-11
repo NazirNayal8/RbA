@@ -1,0 +1,20 @@
+_BASE_: ../maskformer2_R50_bs16_90k.yaml
+MODEL:
+  WEIGHTS: "model_logs/mix_transformer/mask2former_mit_b5_1_dec_layer/model_final.pth"
+  BACKBONE:
+    NAME: "mit_b5"
+  SEM_SEG_HEAD:
+    IN_FEATURES: ["stage1", "stage2", "stage3", "stage4"]
+    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES: ["stage4"]
+  MASK_FORMER:
+    DEC_LAYERS: 2
+    OUTLIER_SUPERVISION: True
+    OUTLIER_LOSS_TARGET: "nls"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  FREEZE_PIXEL_DECODER: True 
+  FREEZE_BACKBONE: True 
+INPUT:
+  DATASET_MAPPER_NAME: "mask_former_semantic_coco_mix"
+SOLVER:
+  MAX_ITER: 5000

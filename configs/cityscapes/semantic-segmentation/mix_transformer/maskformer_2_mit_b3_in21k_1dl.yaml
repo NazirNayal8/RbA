@@ -1,0 +1,12 @@
+_BASE_: ../maskformer2_R50_bs16_90k.yaml
+MODEL:
+  BACKBONE:
+    NAME: "mit_b3"
+  SEM_SEG_HEAD:
+    IN_FEATURES: ["stage1", "stage2", "stage3", "stage4"]
+    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES: ["stage4"]
+  MASK_FORMER:
+    DEC_LAYERS: 2
+  WEIGHTS: "pretrained/mit_b3.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]

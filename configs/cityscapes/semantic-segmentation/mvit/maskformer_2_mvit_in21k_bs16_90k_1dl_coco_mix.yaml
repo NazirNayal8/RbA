@@ -1,0 +1,20 @@
+_BASE_: ../maskformer2_R50_bs16_90k.yaml
+MODEL:
+  WEIGHTS: model_logs/mvit/pretrained_mvit/model_final.pth
+  BACKBONE:
+    NAME: "D2MViT"
+  SEM_SEG_HEAD:
+    IN_FEATURES: ["scale2", "scale3", "scale4", "scale5"]
+    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES: ["scale5"]
+  MASK_FORMER:
+    DEC_LAYERS: 2
+    OUTLIER_SUPERVISION: True
+    OUTLIER_LOSS_TARGET: "nls"
+  FREEZE_PIXEL_DECODER: True 
+  FREEZE_BACKBONE: True 
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+INPUT:
+  DATASET_MAPPER_NAME: "mask_former_semantic_coco_mix"
+SOLVER:
+  MAX_ITER: 5000

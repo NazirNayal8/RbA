@@ -1,3 +1,25 @@
+output
+instant_test_output
+inference_test_output
+anomaly_scores
+wandb
+model_logs
+road-anomaly-benchmark
+road_anomaly_benchmark
+smiyc_outputs
+plots
+animation
+# pretrained
+warehouse
+
+*.png
+*.json
+*.diff
+*.jpg
+*.pkl
+*.pth
+*.pth.tar
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

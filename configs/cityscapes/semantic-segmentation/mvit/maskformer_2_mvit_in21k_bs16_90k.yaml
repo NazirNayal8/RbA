@@ -1,0 +1,10 @@
+_BASE_: ../maskformer2_R50_bs16_90k.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2MViT"
+  SEM_SEG_HEAD:
+    IN_FEATURES: ["scale2", "scale3", "scale4", "scale5"]
+    DEFORMABLE_TRANSFORMER_ENCODER_IN_FEATURES: ["scale3", "scale4", "scale5"]
+  WEIGHTS: "detectron2://ImageNetPretrained/mvitv2/MViTv2_B_in21k.pyth"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]

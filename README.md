@@ -2,7 +2,8 @@
 
 [Nazir Nayal](https://nazirnayal.xyz/), [Mısra Yavuz](https://scholar.google.com/citations?user=lfU8AYUAAAAJ&hl=en), [João Henriques](https://www.robots.ox.ac.uk/~joao/), [Fatma Güney](https://alexander-kirillov.github.io/)
 
-[[`arXiv`](https://arxiv.org/abs/2211.14293)] [[`Project`](https://bowenc0221.github.io/mask2former)] [[`BibTeX`](#CitingRbA)]
+[[`arXiv`](https://arxiv.org/abs/2211.14293)][[`BibTeX`](#CitingRbA)]
+<!-- [[`Project`](https://bowenc0221.github.io/mask2former)] -->
 
 
 <div align="center">

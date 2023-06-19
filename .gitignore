@@ -11,6 +11,7 @@ plots
 animation
 # pretrained
 warehouse
+anomaly_scores
 
 *.png
 *.json

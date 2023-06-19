@@ -192,7 +192,7 @@ def current_result_exists(model_name):
     store_path = os.path.join(args.out_path, model_name)
     return os.path.exists(os.path.join(store_path, f'results.pkl'))
 
-def run_evaluations(model, dataset):
+def run_evaluations(model, dataset, model_name, dataset_name):
     """
     Run evaluations for a particular model over all designated datasets.
     """
@@ -215,6 +215,16 @@ def run_evaluations(model, dataset):
         return_preds=False,
         upper_limit=1300
     )
+
+    if args.store_anomaly_scores:
+
+        vis_path = os.path.join(f"anomaly_scores/{model_name}/{dataset_name}")
+        os.makedirs(vis_path, exist_ok=True)
+        for i in tqdm(range(len(anomaly_score)), desc=f"storing anomaly scores at {vis_path}"):
+            
+            mpimg.imsave(os.path.join(vis_path, f"score_{i}.png"), anomaly_score[i].squeeze(), cmap='viridis')
+
+
 
     metrics = evaluator.evaluate_ood(
         anomaly_score=anomaly_score,
@@ -273,7 +283,7 @@ def main():
             if dataset_name not in results:
                 results[dataset_name] = edict()
 
-            results[dataset_name] = run_evaluations(model, dataset)
+            results[dataset_name] = run_evaluations(model, dataset, model_name, dataset_name)
         
         save_dict(results, model_name)
 

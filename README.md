@@ -80,13 +80,11 @@ NOTE: some experiments require the model to be initialized from pretrained weigh
 If you use RbA in your research, please use the following BibTeX entry.
 
 ```BibTeX
-@misc{nayal2023rba,
-      title={RbA: Segmenting Unknown Regions Rejected by All}, 
-      author={Nazir Nayal and Mısra Yavuz and João F. Henriques and Fatma Güney},
-      year={2023},
-      eprint={2211.14293},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{nayal2023ICCV,
+  author    = {Nazir Nayal and Mısra Yavuz and João F. Henriques and Fatma Güney},
+  title     = {RbA: Segmenting Unknown Regions Rejected by All},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year      = {2023},
 }
 ```
 

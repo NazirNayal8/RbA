@@ -454,7 +454,7 @@ MODEL:
       - 9
       - 10
     WINDOW_SIZE: 14
-  WEIGHTS: model_logs/mask2former_dec_layers_2_res5_only/model_final.pth
+  WEIGHTS: ./ckpts/swin_b_1dl/model_final.pth
   WIDE_RESNET:
     DILATION: true
     DIST_BN: false
@@ -465,7 +465,7 @@ MODEL:
     - 3
     - 1
     - 1
-OUTPUT_DIR: ./model_logs/mappilary_with_cityscapes/swin_b_1dl_60k_coco_mix_p0.5_50kproxy_1e4lr
+OUTPUT_DIR: ./ckpts/swin_b_1dl_rba_ood_map_coco/
 SEED: 41035104
 SOLVER:
   AMP:

@@ -467,7 +467,7 @@ MODEL:
       - 9
       - 10
     WINDOW_SIZE: 14
-  WEIGHTS: ./model_logs/mask2former_dec_layers_2_res5_only/model_0009999.pth
+  WEIGHTS: ./pretrained/swin_base_patch4_window12_384_22k.pkl
   WIDE_RESNET:
     DILATION: true
     DIST_BN: false
@@ -478,7 +478,7 @@ MODEL:
     - 3
     - 1
     - 1
-OUTPUT_DIR: ./model_logs/mask2former_dec_layers_2_res5_only/
+OUTPUT_DIR: ./ckpts/swin_b_1dl/
 SEED: -1
 SOLVER:
   AMP:

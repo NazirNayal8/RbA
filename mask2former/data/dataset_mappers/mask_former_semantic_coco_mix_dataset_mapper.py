@@ -193,6 +193,8 @@ class MaskFormerSemanticCocoMixDatasetMapper:
 
         if "labels_mapping" in meta.as_dict():
             labels_mapping = np.array(meta.labels_mapping)
+        else:
+            labels_mapping = None
 
         ret = {
             "is_train": is_train,

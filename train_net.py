@@ -387,8 +387,7 @@ def main(args):
     for n, m in trainer._trainer.model.named_parameters():
         if m.requires_grad:
             print(n)
-    with torch.autograd.set_detect_anomaly(True):
-        return trainer.train()
+    return trainer.train()
 
 
 if __name__ == "__main__":

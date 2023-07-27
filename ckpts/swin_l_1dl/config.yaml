@@ -461,7 +461,7 @@ MODEL:
     - 3
     - 1
     - 1
-OUTPUT_DIR: ./model_logs/swin_l/mask2former_swin_l_1_dec_layer_true/
+OUTPUT_DIR: ./ckpts/swin_l_1dl/
 SEED: 41035104
 SOLVER:
   AMP:

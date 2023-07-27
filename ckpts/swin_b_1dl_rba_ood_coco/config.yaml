@@ -467,7 +467,7 @@ MODEL:
       - 9
       - 10
     WINDOW_SIZE: 14
-  WEIGHTS: model_logs/mask2former_dec_layers_2_res5_only/model_final.pth
+  WEIGHTS: ./ckpts/swin_b_1dl/model_final.pth
   WIDE_RESNET:
     DILATION: true
     DIST_BN: false
@@ -478,7 +478,7 @@ MODEL:
     - 3
     - 1
     - 1
-OUTPUT_DIR: ./model_logs/normalized_score/out_push/coco_mix_1_dec_layer_mlp_p_0_1_norm_tanh_out_push_m5
+OUTPUT_DIR: ./ckpts/swin_b_1dl_rba_ood_coco
 SEED: 41035104
 SOLVER:
   AMP:

@@ -6,7 +6,7 @@
 [Nazir Nayal](https://nazirnayal.xyz/), [Mısra Yavuz](https://scholar.google.com/citations?user=lfU8AYUAAAAJ&hl=en), [João Henriques](https://www.robots.ox.ac.uk/~joao/), [Fatma Güney](https://mysite.ku.edu.tr/fguney/)
 
 [[`arXiv`](https://arxiv.org/abs/2211.14293)][[`BibTeX`](#CitingRbA)]
-[[`Project`](https://nazirnayal8.github.io/RbA-Project/)]
+[[`Project`](https://kuis-ai.github.io/RbA/)]
 
 
 <div align="center">

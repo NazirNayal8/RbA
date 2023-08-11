@@ -57,13 +57,13 @@ def get_datasets(datasets_folder):
     road_anomaly_21_config = edict(
         dataset_root=os.path.join(datasets_folder,
                                 'SegmentMeIfYouCan/dataset_AnomalyTrack'),
-        dataset_mode='all'
+        dataset_mode='val'
     )
 
     road_obstacle_21_config = edict(
         dataset_root=os.path.join(datasets_folder,
                                 'SegmentMeIfYouCan/dataset_ObstacleTrack'),
-        dataset_mode='all'
+        dataset_mode='val'
     )
 
     laf_config = edict(

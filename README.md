@@ -15,6 +15,7 @@
 
 
 ## Updates
+* 25.10.2024: Model Weights are available now as a release!
 * code with training and evaluation scripts are available
 
 ## Installation

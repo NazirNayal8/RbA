@@ -27,6 +27,9 @@ It's common to initialize from backbone models pre-trained on ImageNet classific
 
 **Note**: according the config files we provide, it is assumed that the pretrained checkpoints are placed under the `pretrained/` folder. Make sure they are either placed there or that the config file is overwritten with the desired path when running an experiment.
 
+
+**Important Update**: Model weights for the models in the tables below are now available as a github release in the repo.
+
 ## Cityscapes Inlier Training
 
 These models are trained on cityscapes dataset only and are used as a starting point for finetuning with outlier supervision.

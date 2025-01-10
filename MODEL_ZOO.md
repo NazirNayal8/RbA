@@ -55,7 +55,7 @@ These models are trained on cityscapes dataset only and are used as a starting p
 <td align="center">60.96</td>
 <td align="center">10.63</td>
 <td align="center"><a href="ckpts/swin_b_1dl/config.yaml">config</a></td>
-<td align="center"><a href="https://drive.google.com/file/d/13IJs_Kk1PMBVVxCN90HZZuuV1YcWZ0am/view?usp=sharing">model</a></td>
+<td align="center"><a href="https://github.com/NazirNayal8/RbA/releases/download/model-weights/swin_b_1dl.zip">model</a></td>
 </tr>
 
 <tr><td align="left">Swin-L (1 dec layer)</td>
@@ -65,7 +65,7 @@ These models are trained on cityscapes dataset only and are used as a starting p
 <td align="center">58.61</td>
 <td align="center">71.79</td>
 <td align="center"><a href="ckpts/swin_l_1dl/config.yaml">config</a></td>
-<td align="center"><a href="https://drive.google.com/file/d/1PBjdwHjpbAo7v6pa7B0JZVOjkQ5av_qn/view?usp=sharing">model</a></td>
+<td align="center"><a href="https://github.com/NazirNayal8/RbA/releases/download/model-weights/swin_l_1dl.zip">model</a></td>
 </tr>
 
 </tbody></table>
@@ -99,7 +99,7 @@ These models are finetuned from the checkpoints which were trained using Citysca
 <td align="center">70.81</td>
 <td align="center">6.30</td>
 <td align="center"><a href="ckpts/swin_b_1dl_rba_ood_coco/config.yaml">config</a></td>
-<td align="center"><a href="https://drive.google.com/file/d/1d5blruLB0ll6vtGAfvRH1iID6ArclWKD/view?usp=sharing">model</a></td>
+<td align="center"><a href="https://github.com/NazirNayal8/RbA/releases/download/model-weights/swin_b_1dl_rba_ood_coco.zip">model</a></td>
 </tr>
 
 </tbody></table>
@@ -133,7 +133,7 @@ These models are finetuned from the checkpoints used for training Cityscapes. Du
 <td align="center">78.27</td>
 <td align="center">3.98</td>
 <td align="center"><a href="ckpts/swin_b_1dl_rba_ood_map_coco/config.yaml">config</a></td>
-<td align="center"><a href="https://drive.google.com/file/d/1bdqnl6UdtK3C1jsdAaJiVcPIIojqGfWP/view?usp=sharing">model</a></td>
+<td align="center"><a href="https://github.com/NazirNayal8/RbA/releases/download/model-weights/swin_b_1dl_rba_ood_coco.zip">model</a></td>
 </tr>
 
  <tr><td align="left">Swin-L (1 dec layer)</td>
@@ -143,7 +143,7 @@ These models are finetuned from the checkpoints used for training Cityscapes. Du
 <td align="center">80.35</td>
 <td align="center">4.58</td>
 <td align="center"><a href="ckpts/swin_l_1dl_rba_ood_map_coco/config.yaml">config</a></td>
-<td align="center"><a href="https://drive.google.com/file/d/1woFhXmGceUoDFZIDIoF0NW7ehkQl_DQS/view?usp=sharing">model</a></td>
+<td align="center"><a href="https://github.com/NazirNayal8/RbA/releases/download/model-weights/swin_l_1dl_rba_ood_map_coco.zip">model</a></td>
 </tr>
 
 </tbody></table>
